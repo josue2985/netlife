@@ -1,0 +1,17 @@
+section.hero {
+  background-color: #000;
+    .wrapper {
+      &.photo {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        align-self: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+  

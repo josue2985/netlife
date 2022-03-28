@@ -1,0 +1,30 @@
+section.top {
+  background-color: #000;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .logo {
+    width: 12em;
+    img {
+      max-width: 100%;
+      margin: 0;
+    }
+  }
+  .contact {
+    display: flex;
+    align-items: center;
+    img {
+      margin: 0;
+      width: 10em;
+      &:not(:last-child) {
+        margin-right: 1em;
+        margin-top: 0.6em;
+      }
+    }
+  }
+}
+

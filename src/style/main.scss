@@ -1,0 +1,26 @@
+@import 'modules/top';
+@import 'modules/hero';
+@import 'modules/reset';
+
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.sides-padding {
+  padding-right: 10em;
+  padding-left: 10em;
+  max-width: 1288px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (max-width: 900px) {
+  .sides-padding {
+    padding-right: 3em;
+    padding-left: 3em;
+    max-width: 1288px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
