@@ -17,14 +17,32 @@ section.top {
   .contact {
     display: flex;
     align-items: center;
-    img {
+
+    a {
       margin: 0;
       width: 10em;
+      cursor: pointer;
       &:not(:last-child) {
         margin-right: 1em;
-        margin-top: 0.6em;
+        margin-top: 1em;
       }
     }
   }
 }
+
+@media screen and (max-width: 500px) /* Mobile */ {
+  section.top {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    .wrapper {
+      justify-content: center;
+    }
+    .logo {
+      width: 8em;
+    }
+    .contact {
+      display: none;
+    }
+  }
+ }
 

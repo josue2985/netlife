@@ -1,9 +1,27 @@
-@import 'modules/top';
-@import 'modules/hero';
-@import 'modules/reset';
+@import "modules/top";
+@import "modules/hero";
+@import "modules/reset";
+@import "modules/cta";
+@import "modules/simulator";
+@import "modules/footer";
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+
+@font-face {
+  font-family: "hemi_headbold_italic";
+  src: url("../static/fonts/hemiheadrg-bolditalic-webfont.woff2")
+      format("woff2"),
+    url("../static/fonts/hemiheadrg-bolditalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 
 body {
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+  font-family: "hemi_headbold_italic", sans-serif;
 }
 
 .sides-padding {
@@ -16,11 +34,30 @@ body {
 
 @media only screen and (max-width: 900px) {
   .sides-padding {
-    padding-right: 3em;
-    padding-left: 3em;
+    padding-right: 2em;
+    padding-left: 2em;
     max-width: 1288px;
     margin-left: auto;
     margin-right: auto;
   }
 }
 
+@media only screen and (max-width: 690px) {
+  #plans-home {
+    height: 1500px;
+  }
+}
+
+body {
+  animation: fadeInAnimation ease 240ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}

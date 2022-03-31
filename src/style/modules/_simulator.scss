@@ -1,0 +1,176 @@
+section.simulator {
+  height: 50vh;
+  background-color: #1f1e1e;
+  padding-top: 2em;
+  .neon-border {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    border-radius: 15px;
+    background: #1f1e1e;
+    border: 2px solid #ffc300;
+    box-shadow: 0px 0px 3px 5px rgb(255 196 0),
+      inset 0px 0px 3px 3px rgb(255 196 0);
+    .content {
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .col1 {
+      width: 60%;
+      .header {
+        display: flex;
+        align-items: center;
+        img {
+          max-width: 50px;
+          margin-right: 0.6em;
+        }
+        h1 {
+          font-size: 1.4em;
+          color: #ff6a00;
+        }
+      }
+    }
+  }
+
+  .question {
+    margin-top: 2em;
+  }
+
+  .navigation-buttons {
+    overflow: auto;
+    margin-top: 2em;
+    div {
+      text-align: center;
+    }
+
+    button {
+      background-color: #04aa6d;
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 17px;
+      cursor: pointer;
+      border-radius: 100px;
+    }
+
+    button:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .input-options {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2em;
+    div {
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+  }
+  input {
+    width: 6em;
+    height: 5em;
+    border: 1px solid #aaaaaa;
+  }
+
+  input[type="radio"][id^="cb"] {
+    display: none;
+  }
+
+  label {
+    box-shadow: 0px 0px 11px #ddd;
+    border-radius: 11px;
+    padding: 0px 10px;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    // box-shadow: 0px 0px 0 5px #ddd;
+    width: 105px;
+    height: 70px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      background-color: #ff6a0061;
+      border: 1px solid #ff6a00;
+    }
+  }
+
+  label:before {
+    visibility: hidden;
+    background-color: white;
+    color: white;
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    top: -14px;
+    right: -7px;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 28px;
+    transition-duration: 0.4s;
+    transform: scale(0);
+    border: 1.4px solid #fff;
+  }
+
+  :checked + label {
+    box-shadow: 0px 0px 0 1.4px #4ac683;
+    background: #beffdc;
+    &:hover {
+      background-color: #beffdc;
+      border: 1px solid #4ac683;
+    }
+  }
+
+  :checked + label:before {
+    visibility: visible;
+    content: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg viewBox='0 0 35 29' width='15px' xmlns='http://www.w3.org/2000/svg'%3E%3Cg transform='translate(4227.5 -463.85)' fill='%23f8fcff' data-name='Group 1926'%3E%3Cpath transform='translate(-4229.4 455.15)' d='m6.348 25.59c-1.906-2-4.954 1.048-2.953 2.953 2.477 2.573 4.954 5.24 7.526 7.717 1.144 1.048 2 1.048 3.049 0l18.2-18.1c1.906-2-1.048-5.049-3.049-3.049l-16.582 16.576-6.193-6.1z' fill-rule='evenodd'/%3E%3Cpath transform='translate(-4229.4 455.15)' d='M12.481,37.8a3.072,3.072,0,0,1-2.067-.983L10.4,36.8c-1.95-1.878-3.865-3.885-5.717-5.826-.6-.625-1.213-1.271-1.818-1.9a2.646,2.646,0,0,1-.677-2.968,3.045,3.045,0,0,1,2.734-1.921,2.685,2.685,0,0,1,1.969.887l.01.011,5.634,5.547L28.587,14.579a2.79,2.79,0,0,1,1.991-.873,3.034,3.034,0,0,1,2.716,1.871,2.789,2.789,0,0,1-.586,3.1l-.014.014-18.2,18.1A2.876,2.876,0,0,1,12.481,37.8Zm-1.047-2.083a1.794,1.794,0,0,0,1.047.583,1.533,1.533,0,0,0,.958-.567l18.19-18.1a1.294,1.294,0,0,0,.286-1.465,1.561,1.561,0,0,0-1.337-.962,1.309,1.309,0,0,0-.931.433l-17.1,17.1L5.7,26.006a1.154,1.154,0,0,0-.778-.32,1.557,1.557,0,0,0-1.341.978A1.147,1.147,0,0,0,3.912,28l.023.023c.611.635,1.232,1.286,1.833,1.915C7.608,31.866,9.51,33.859,11.435,35.714Z' data-name='np_checkmark_3345769_000000 - Outline'/%3E%3C/g%3E%3C/svg%3E");
+    background-color: #4ac683;
+    transform: scale(1);
+    // padding: 7px;
+    // padding-top: 4px;
+    border: 1.4px solid #4ac683;
+  }
+
+  /* Mark input boxes that gets an error on validation: */
+  input.invalid {
+    background-color: #ffdddd;
+  }
+
+  /* Hide all steps by default: */
+  .tab {
+    display: none;
+  }
+
+  #prevBtn {
+    background-color: #bbbbbb;
+  }
+
+  /* Make circles that indicate the steps of the form: */
+  .step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+  }
+
+  .step.active {
+    opacity: 1;
+  }
+
+  /* Mark the steps that are finished and valid: */
+  .step.finish {
+    background-color: #04aa6d;
+  }
+}

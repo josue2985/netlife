@@ -1,0 +1,35 @@
+footer {
+  background: #000;
+  .wrapper {
+    display: flex;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  p {
+      color: white;
+  }
+  a {
+      color: #f6921e;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+  }
+}
+
+@media screen and (max-width: 500px) /* Mobile */ { 
+  footer {
+    background: #000;
+    .wrapper {
+      flex-direction: column;
+    }
+    p {
+      text-align: center;
+      margin-top: 1em;
+    }
+  } 
+}

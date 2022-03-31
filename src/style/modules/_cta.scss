@@ -1,0 +1,103 @@
+section.cta {
+  background: #f6921e;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  h1 {
+    text-align: center;
+    line-height: 1.1;
+    .white {
+      color: white;
+      text-shadow: 2px 5px black;
+    }
+  }
+  form {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 70%;
+    input[type="text"],
+    input[type="tel"] {
+      background-color: #fff;
+      border: 1px solid #f47e1b;
+      font-size: 15px;
+      border-radius: 6px;
+      color: #000;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 0.6em;
+      padding: 5px 10px;
+      transition: all 240ms ease-in;
+    }
+    input[type="submit"] {
+      font-size: 1.2em;
+      width: 176px;
+      text-align: center;
+      padding: 8px 0px;
+      border-radius: 50px;
+      color: #000;
+      font-weight: bold;
+      background: rgb(250, 189, 58);
+      box-shadow: -1px 2px 10px #b0580fa8;
+      background: linear-gradient(
+        0deg,
+        rgba(250, 189, 58, 1) 0%,
+        rgba(244, 126, 27, 1) 100%
+      );
+      transition: all 240ms ease-in;
+      border: 0;
+      transform: translateY(0px);
+      cursor: pointer;
+      &:hover {
+        transform: translateY(-7px);
+      }
+    }
+    input:focus-visible {
+      outline-style: dashed;
+      outline-width: 2px;
+      outline-color: #fff;
+      border: 1px solid #c7620f;
+    }
+    .alert {
+      color: #fff;
+      font-size: 0.8em;
+      text-align: right;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) /* Mobile */ {
+  section.cta {
+    background: #f6921e;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    .wrapper {
+      flex-direction: column;
+    }
+    h1 {
+      margin-bottom: 1em;
+    }
+    form {
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+      input[type="button"] {
+        width: 100%;
+        margin-top: 1em;
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+      .alert {
+        color: #fff;
+        font-size: 0.8em;
+        text-align: right;
+      }
+    }
+  }
+}

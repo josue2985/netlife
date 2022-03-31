@@ -4,9 +4,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
     <title>Netlife</title>
   </head>
-
   <body>
     <section class="top">
       <div class="wrapper sides-padding">
@@ -16,21 +16,228 @@
             alt="Netlife Ecuador"
           />
         </div>
-        <div class="contact" style="display:none">
-          <img src="./static/netlife-telefono.png" alt="Netlife Ecuador" />
-          <img src="./static/netlife-asesor.png" alt="Netlife Ecuador" />
+        <div class="contact">
+          <a href="tel:0996967921">
+            <img src="./static/netlife-telefono.png" alt="Netlife Ecuador" />
+          </a>
+          <a href="tel:043920000">
+            <img src="./static/netlife-asesor.png" alt="Netlife Ecuador" />
+          </a>
         </div>
       </div>
     </section>
     <section class="hero">
       <div class="wrapper photo sides-padding">
+        <img
+          class="hero-pic"
+          src="./static/hero-netlife-just-girl-min.png"
+          alt="Netlife Ecuador"
+        />
+        <img
+          class="badge-internet"
+          src="./static/mobile-ultra-velocidad-badge.png"
+          alt="Netlife Ecuador"
+
+        />
         <div class="contact-form">
-          contactform
+          <h1>
+            CONSULTA EL MEJOR<br /><span class="white">PLAN PARA TI</span>
+          </h1>
+          <div class="form-container">
+            <div class="content-bg">
+              <div class="indications">
+                Déjanos tu <span class="yellow">nombre</span> y tu
+                <span class="yellow">número</span> <br />
+                un asesor comercial se comunicará.
+              </div>
+              <form id="form-hero" name="formHero">
+                <span id="heroFormNameLabel" class="alert hide"
+                  >Escribe tu nombre</span
+                >
+                <input type="text" placeholder="NOMBRE" name="name" id="name" />
+                <span id="heroFormPhoneLabel" class="alert hide"
+                  >Escribe tu teléfono</span
+                >
+                <input
+                  type="tel"
+                  placeholder="NÚMERO DE TELÉFONO"
+                  name="phone"
+                  id="phone"
+                />
+                <input type="submit" id="heroButton" value="Contrata Aquí!" />
+              </form>
+            </div>
+          </div>
         </div>
         <div class="cta">
-          cta button
+          <a>
+            <img src="./static/velocidad-internet.webp" alt="" />
+          </a>
+        </div>
+        <div class="cta-mobile">
+          <img src="./static/mobile-feature.png" alt="Netlife Ecuador" />
         </div>
       </div>
     </section>
+    <section class="iframe">
+      <iframe
+        id="plans-home"
+        loading="lazy"
+        src="https://www.netlife.ec/planes-hogar-dist/"
+        style="
+          border: 0px none rgb(255, 255, 255);
+          opacity: 1;
+          visibility: visible;
+        "
+        name="homeplans"
+        scrolling="no"
+        frameborder="1"
+        marginheight="0px"
+        marginwidth="0px"
+        height="1025px"
+        width="100%"
+        allowfullscreen=""
+      ></iframe>
+    </section>
+    <section class="cta">
+      <div class="wrapper sides-padding">
+        <h1>
+          OBTÉN LA <br />
+          <span class="white">VELOCIDAD IDEAL</span>
+        </h1>
+        <form id="cta-form" name="ctaForm">
+          <div>
+            <span id="ctaNameLabel" class="alert hide">Escribe tu nombre</span>
+            <input type="text" placeholder="NOMBRE" name="name" is="name" />
+          </div>
+          <div>
+            <span id="ctaphoneLabel" class="alert hide">Escribe tu teléfono</span>
+            <input
+              type="tel"
+              placeholder="NÚMERO DE TELÉFONO"
+              name="phone"
+              id="phone"
+            />
+          </div>
+          <input type="submit" value="Enviar" id="ctaButton" />
+        </form>
+      </div>
+    </section>
+    <!-- <section class="simulator">
+      <div class="wrapper sides-padding">
+        <div class="neon-border">
+          <div class="content">
+            <div class="col1">
+              
+              <form id="regForm">
+                <div class="header">
+                  <img src="./static/simulator-icon.webp" alt="Netlife Ecuador">
+                  <h1>Calculadora de Ancho de Banda</h1>
+                </div>
+                <div class="tab">
+                  <div class="question">
+                    Cuantos dispositivos se conectan a internet?
+                  </div>
+                  <div class="input-options">
+                    <div>
+                      <input type="radio" oninput="this.className = ''" name="fname" id="cb1" checked>
+                      <label for="cb1" checked>1-4</label>
+                    </div>
+                    <div>
+                      <input type="radio"  oninput="this.className = ''" name="fname" id="cb2">
+                      <label for="cb2">5-10</label>
+                    </div>
+                    <div>
+                      <input type="radio"  oninput="this.className = ''" name="fname" id="cb3">
+                      <label for="cb3">10-15</label>
+                    </div>
+                    <div>
+                      <input type="radio"  oninput="this.className = ''" name="fname" id="cb4">
+                      <label for="cb4">15+</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab">
+                  <div class="question">
+                    Que tan seguido usas apps de videoconferencia como Zoom o skype?
+                  </div>
+                  <div class="input-options">
+                    <div>
+                      <input type="radio" oninput="this.className = ''" name="sec" id="cb5">
+                      <label for="cb5">Diario</label>
+                    </div>
+                    <div>
+                      <input type="radio"  oninput="this.className = ''" name="sec" id="cb6" checked>
+                      <label for="cb6" checked>Semanal</label>
+                    </div>
+                    <div>
+                      <input type="radio"  oninput="this.className = ''" name="sec" id="cb7">
+                      <label for="cb7">Rara Vez</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab">
+                  <div class="question">
+                    Que tan seguido juegas Online?
+                  </div>
+                  <div class="input-options">
+                    <div>
+                      <input type="radio" oninput="this.className = ''" name="sec" id="cb8" checked>
+                      <label for="cb8" checked>Diario</label>
+                    </div>
+                    <div>
+                      <input type="radio"  oninput="this.className = ''" name="sec" id="cb9">
+                      <label for="cb9" checked>Semanal</label>
+                    </div>
+                    <div>
+                      <input type="radio"  oninput="this.className = ''" name="sec" id="cb10">
+                      <label for="cb10">Rara Vez</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab">Login Info:
+                  <p><input placeholder="Username..." oninput="this.className = ''" name="uname"></p>
+                  <p><input placeholder="Password..." oninput="this.className = ''" name="pword" type="password"></p>
+                </div>
+                <div class="navigation-buttons">
+                  <div>
+                    <button type="button" id="prevBtn" onclick="nextPrev(-1)">Atrás</button>
+                    <button type="button" id="nextBtn" onclick="nextPrev(1)">Siguiente</button>
+                  </div>
+                </div>
+                <div style="text-align:center;margin-top:40px;">
+                  <span class="step"></span>
+                  <span class="step"></span>
+                  <span class="step"></span>
+                  <span class="step"></span>
+                </div>
+              </form>
+            </div>
+            <div class="col2">
+              parte 2
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <footer>
+      <div class="wrapper sides-padding">
+        <img src="./static/instalar-logo.png" alt="Netlife Ecuador" />
+        <p>
+          Revisa nuestros términos y condiciones en el link de
+          <a href="https://www.netlife.ec/politica-privacidad/" target="_blank">
+            política de privacidad.
+          </a>
+        </p>
+      </div>
+    </footer>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+
+    <script type="text/javascript">
+      emailjs.init("9qYz9GMguy3fXL6sE");
+    </script>
   </body>
 </html>
