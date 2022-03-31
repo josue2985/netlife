@@ -79,7 +79,7 @@ document.getElementById('cta-form')
     }, (err) => {
       btnCta.value = 'Hubo un error!';
       setTimeout(function(){
-        btnCta.value = 'Enviar';
+        btnCta.value = 'Contratar!';
       }, 2000);
     });
    }
