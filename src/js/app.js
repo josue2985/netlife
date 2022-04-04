@@ -198,20 +198,19 @@ window.nextPrev = nextPrev;
 
 function validateForm() {
   var x, y, i, 
-  valid = true;
+  valid = false;
   x = document.getElementsByClassName("tab");
-  y = x[currentTab].getElementsByTagName("input");
+  y = x[currentTab].querySelectorAll("input");
   for (i = 0; i < y.length; i++) { 
     // console.log(y[i].checked);
-    if (y[i].checked == false) { 
-      console.log('invalido')
+    if (y[i].checked) { 
+      console.log('valido')
+      document.getElementsByClassName("step")[currentTab].className +=" finish"; 
+      valid = true; 
+    } else {
+      console.log('invalido');
       y[i].className +=" invalid"; 
-      valid = false; 
-    } 
-  } if (valid) { 
-    console.log('valido');
-    
-    document.getElementsByClassName("step")[currentTab].className +=" finish"; 
+    }
   } 
   return valid; 
 } 
