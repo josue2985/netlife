@@ -44,6 +44,7 @@ section.simulator {
       width: 33%;
       padding: 20px;
       padding-top: 6em;
+      border-radius: 0px 10px 10px 0px;
     }
   }
 
@@ -293,6 +294,11 @@ section.simulator {
     }
   }
 
+  label.invalid {
+    border: 1px solid #f44336;
+    background: #f2dcdb;
+  }
+
   label:before {
     visibility: hidden;
     background-color: white;
@@ -346,6 +352,18 @@ section.simulator {
     background-color: #bbbbbb;
   }
 
+  #validate-message {
+    font-size: 0.8em;
+    color: #f44336;
+    margin-bottom: 1em;
+    &.hidden {
+      visibility: hidden;
+    }
+    &.show {
+      visibility: visible;
+    }
+  }
+
   /* Make circles that indicate the steps of the form: */
   .step {
     height: 15px;
@@ -369,7 +387,57 @@ section.simulator {
 }
 
 @media screen and (max-width: 500px) /* Mobile */ {
+  section.simulator {
+    .neon-border {
+      .col1 {
+        width: 100%;
+        .header {
+          display: flex;
+          align-items: center;
+        }
+      }
+      .col2 {
+        display: none;
+      }
+    }
+    .input-options {
+      flex-wrap: wrap;
+      div {
+        &:not(:last-child) {
+          margin-bottom: 25px;
+        }
+      }
+    }
+    .question.results {
+      flex-direction: column;
+      align-content: flex-start;
+      align-items: center;
+      margin-top: 1em;
+      margin-bottom: 1em;
+    }
+    .last-tab {
+      form {
+        .flex {
+          flex-direction: column;
+          div {
+            margin-bottom: 0;
+            margin-right: 0;
+          }
+        }
+        .alert {
+          color: #f86161;
+          font-size: 0.8em;
+          text-align: right;
+        }
+      }
+    }
+  }
   .indicator-container {
-    display: block;
+    display: block !important;
+  }
+  .navigation-buttons {
+    div {
+      text-align: center !important;
+    }
   }
 }

@@ -4,6 +4,7 @@ if (module.hot) {
 
 const btnHero = document.getElementById('heroButton');
 const btnCta = document.getElementById('ctaButton');
+let msg = document.getElementById("validate-message");
 
 document.getElementById('form-hero')
  .addEventListener('submit', function(event) {
@@ -174,6 +175,7 @@ function nextPrev(n) {
   if (n == 1 && !validateForm()) return false;
   x[currentTab].style.display = "none";
   currentTab = currentTab + n;
+  msg.classList.remove('show');
   if (currentTab >= x.length) {
     document.getElementById("nextprevious").style.display = "none";
     document.getElementById("all-steps").style.display = "none";
@@ -209,6 +211,7 @@ function validateForm() {
       valid = true; 
     } else {
       console.log('invalido');
+      msg.classList.add('show');
       y[i].className +=" invalid"; 
     }
   } 
@@ -272,7 +275,7 @@ function calculateQuestion2() {
   let cb6 = document.getElementById('cb6');
   let cb7 = document.getElementById('cb7');
   if(cb5.checked) {
-    totalStep2 = 10;
+    totalStep2 = 30;
     document.getElementById('feedback-videochat').innerHTML='Diario';
   } else 
   if(cb6.checked) {
@@ -280,7 +283,7 @@ function calculateQuestion2() {
     document.getElementById('feedback-videochat').innerHTML='Semanal';
   } else 
   if(cb7.checked) {
-    totalStep2 = 30;
+    totalStep2 = 10;
     document.getElementById('feedback-videochat').innerHTML='Rara Vez';
   }
   else {
@@ -293,7 +296,7 @@ function calculateQuestion3() {
   let cb9 = document.getElementById('cb9');
   let cb10 = document.getElementById('cb10');
   if(cb8.checked) {
-    totalStep3 = 10;
+    totalStep3 = 30;
     document.getElementById('feedback-semanal').innerHTML='Diario';
   } else 
   if(cb9.checked) {
@@ -301,7 +304,7 @@ function calculateQuestion3() {
     document.getElementById('feedback-semanal').innerHTML='Semanal';
   } else 
   if(cb10.checked) {
-    totalStep3 = 30;
+    totalStep3 = 10;
     document.getElementById('feedback-semanal').innerHTML='Rara Vez';
   }
   else {
@@ -311,7 +314,8 @@ function calculateQuestion3() {
 
 function calculateTotalMegas() {
   let totalMegas = totalStep1 + totalStep2 + totalStep3;
-  megasValue.setAttribute('value', totalMegas);
+  // megasValue.setAttribute('value', totalMegas);
+  megasValue.innerHTML = totalMegas;
 }
 
 function resetCheckobxes() {
@@ -324,6 +328,7 @@ function resetCheckobxes() {
   currentTab = 0;
   showTab(currentTab);
   document.getElementById("nextBtn").style.display = "initial";
+  msg.classList.remove('show');
 }
 
 window.resetCheckobxes = resetCheckobxes;
