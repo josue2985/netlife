@@ -100,7 +100,7 @@
         </div>
       </div>
     </section>
-    <section class="iframe">
+    <!-- <section class="iframe">
       <iframe
         id="plans-home"
         loading="lazy"
@@ -119,7 +119,7 @@
         width="100%"
         allowfullscreen=""
       ></iframe>
-    </section>
+    </section>  -->
     <section class="cta">
       <div class="wrapper sides-padding">
         <h1>
@@ -144,13 +144,13 @@
         </form>
       </div>
     </section>
-    <!-- <section class="simulator">
+    <section class="simulator">
       <div class="wrapper sides-padding">
         <div class="neon-border">
           <div class="content">
             <div class="col1">
               
-              <form id="regForm">
+              <div id="regForm">
                 <div class="header">
                   <img src="./static/simulator-icon.webp" alt="Netlife Ecuador">
                   <h1>Calculadora de Ancho de Banda</h1>
@@ -161,8 +161,8 @@
                   </div>
                   <div class="input-options">
                     <div>
-                      <input type="radio" oninput="this.className = ''" name="fname" id="cb1" checked>
-                      <label for="cb1" checked>1-4</label>
+                      <input type="radio" oninput="this.className = ''" name="fname" id="cb1" >
+                      <label for="cb1" >1-4</label>
                     </div>
                     <div>
                       <input type="radio"  oninput="this.className = ''" name="fname" id="cb2">
@@ -188,8 +188,8 @@
                       <label for="cb5">Diario</label>
                     </div>
                     <div>
-                      <input type="radio"  oninput="this.className = ''" name="sec" id="cb6" checked>
-                      <label for="cb6" checked>Semanal</label>
+                      <input type="radio"  oninput="this.className = ''" name="sec" id="cb6" >
+                      <label for="cb6" >Semanal</label>
                     </div>
                     <div>
                       <input type="radio"  oninput="this.className = ''" name="sec" id="cb7">
@@ -203,22 +203,72 @@
                   </div>
                   <div class="input-options">
                     <div>
-                      <input type="radio" oninput="this.className = ''" name="sec" id="cb8" checked>
-                      <label for="cb8" checked>Diario</label>
+                      <input type="radio" oninput="this.className = ''" name="third" id="cb8">
+                      <label for="cb8">Diario</label>
                     </div>
                     <div>
-                      <input type="radio"  oninput="this.className = ''" name="sec" id="cb9">
+                      <input type="radio"  oninput="this.className = ''" name="third" id="cb9">
                       <label for="cb9" checked>Semanal</label>
                     </div>
                     <div>
-                      <input type="radio"  oninput="this.className = ''" name="sec" id="cb10">
+                      <input type="radio"  oninput="this.className = ''" name="third" id="cb10">
                       <label for="cb10">Rara Vez</label>
                     </div>
                   </div>
                 </div>
-                <div class="tab">Login Info:
-                  <p><input placeholder="Username..." oninput="this.className = ''" name="uname"></p>
-                  <p><input placeholder="Password..." oninput="this.className = ''" name="pword" type="password"></p>
+                <div class="tab last-tab">
+                  <div class="question results">
+                    Tu velocidad recomendada es:
+                    <div>
+                      <input type="number" value="0" id="megasValue" class="megas-value" disabled>
+                       <span>Mbps</span>
+                    </div>
+                  </div>
+                  <div class="reload-simulator">
+                    <a onclick="resetCheckobxes()">Empezar nuevamente <i class="icon-reload"></i></a>
+                  </div>
+                  <div class="based-recomendation">
+                    <strong>Recomendación basada en:</strong>
+                    <ul>
+                      <li>De <span id="feedback-devices">1-4 </span> dispositivos conectados</li>
+                      <li>Uso de video chat <span id="feedback-videochat">semanal </span></li>
+                      <li>Uso de juegos online <span id="feedback-semanal">semanal</span> </li>
+                    </ul>
+                  </div>
+                  <div class="input-options">
+                    <div class="contact-form">
+                      <div class="form-container">
+                        <div class="content-bg">
+                          <div class="indications">
+                            <strong>Contrata hoy el internet más rapido de Ecuador!</strong>
+                          </div>
+                          <form id="form-simulator" name="formSimulator">
+                            <div class="flex">
+                              <div>                            
+                                <span id="simFormNameLabel" class="alert hide"
+                                  >Escribe tu nombre</span
+                                >
+                                <input type="text" placeholder="NOMBRE" name="name" id="name" />
+                              </div>
+                              <div>
+                                <span id="simFormPhoneLabel" class="alert hide"
+                                  >Escribe tu teléfono</span
+                                >
+                                <input
+                                  type="tel"
+                                  placeholder="NÚMERO DE TELÉFONO"
+                                  name="phone"
+                                  id="phone"
+                                />
+                              </div>
+                            </div>
+                            <input type="submit" id="simButton" value="Contrata Aquí!" />
+                          </form>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div class="navigation-buttons">
                   <div>
@@ -226,21 +276,41 @@
                     <button type="button" id="nextBtn" onclick="nextPrev(1)">Siguiente</button>
                   </div>
                 </div>
-                <div style="text-align:center;margin-top:40px;">
+                <div class="indicator-container">
                   <span class="step"></span>
                   <span class="step"></span>
                   <span class="step"></span>
                   <span class="step"></span>
                 </div>
-              </form>
+              </div>
+              
             </div>
             <div class="col2">
-              parte 2
+             <div class="mini-map">
+               <div class="item">
+                 <div class="circle"></div>
+                 <div class="label">Dispositivos</div>
+               </div>
+               <div class="item">
+                <div class="circle"></div>
+                <div class="label">Video Chat</div>
+              </div>
+              <div class="item">
+                <div class="circle"></div>
+                <div class="label">Juegos Online</div>
+              </div>
+              <div class="item">
+                <div class="circle"></div>
+                <div class="label">Resultados</div>
+              </div>
+              <div class="line"></div>
+             </div>
+
             </div>
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
     <footer>
       <div class="wrapper sides-padding">
         <img src="./static/instalar-logo.png" alt="Netlife Ecuador" />
