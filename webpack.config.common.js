@@ -64,6 +64,18 @@ module.exports = {
         from: './src/static/',
         to: './static/',
       },
+      {
+        from: './src/_redirects',
+        to: '[name]',
+      },
+      {
+        from: './src/robots.txt',
+        to: '[name].[ext]',
+      },
+      {
+        from: './src/sitemap.xml',
+        to: '[name].[ext]',
+      },
     ]),
     ...generateHTMLPlugins(),
   ],
