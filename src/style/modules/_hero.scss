@@ -136,6 +136,15 @@ section.hero {
   }
 }
 
+.disclousure-hero {
+  color: #f47e1b;
+  text-align: center;
+  a {
+    font-weight: bold;
+    color:#f47e1b;
+  }
+}
+
 @media screen and (max-width: 500px) /* Mobile */ {
   section.hero {
     background: #f6921e;
