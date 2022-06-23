@@ -113,8 +113,13 @@
                   name="phone"
                   id="phone"
                 />
-                <div class="disclousure-hero">Acepto las <a href="https://www.netlife.ec/politica-privacidad/" target="_blank">Políticas de Privacidad</a> y Autorizo contacto vía Telefónico o vía Whatsapp</div>
+                <div class="disclousure-hero">
+                  <input type="checkbox" name="privacidad1" id="privacidad1">
+                  <label for="privacidad1">  Acepto las <a href="https://www.netlife.ec/politica-privacidad/" target="_blank">Políticas de Privacidad</a> y Autorizo contacto vía Telefónico o vía Whatsapp</label>
+                </div>
                 <input type="submit" id="heroButton" value="Contrata Aquí!" />
+                <span id="heroFormPrivacidadLabel" class="alert hide"
+                >Haz click para aceptar las políticas de Privacidad</span>
               </form>
             </div>
           </div>
@@ -144,7 +149,7 @@
         frameborder="1"
         marginheight="0px"
         marginwidth="0px"
-        height="1025px"
+        height="900px"
         width="100%"
         allowfullscreen=""
       ></iframe>
@@ -155,24 +160,36 @@
           OBTÉN LA <br />
           <span class="white">VELOCIDAD IDEAL</span>
         </h1>
-        <form id="cta-form" name="ctaForm">
-          <div>
-            <span id="ctaNameLabel" class="alert hide">Escribe tu nombre</span>
-            <input type="text" placeholder="NOMBRE" name="name" is="name" />
-          </div>
-          <div>
-            <span id="ctaphoneLabel" class="alert hide">Escribe tu teléfono</span>
-            <input
-              type="tel"
-              placeholder="NÚMERO DE TELÉFONO"
-              name="phone"
-              id="phone"
-            />
-          </div>
-          <input type="submit" value="Contratar!" id="ctaButton" />
-        </form>
+        <div>
+          <form id="cta-form" name="ctaForm">
+            <div class="form-inputs">
+              <div>
+                <span id="ctaNameLabel" class="alert hide">Escribe tu nombre</span>
+                <input type="text" placeholder="NOMBRE" name="name" is="name" />
+              </div>
+              <div>
+                <span id="ctaphoneLabel" class="alert hide">Escribe tu teléfono</span>
+                <input
+                  type="tel"
+                  placeholder="NÚMERO DE TELÉFONO"
+                  name="phone"
+                  id="phone"
+                />
+              </div>
+              <input type="submit" value="Contratar!" id="ctaButton" />
+            </div>
+            <div class="form-disclosure">
+              <div class="disclousure-cta">
+                <input type="checkbox" name="privacidad2" id="privacidad2">
+                <label for="privacidad2">  Acepto las <a href="https://www.netlife.ec/politica-privacidad/" target="_blank">Políticas de Privacidad</a> y Autorizo contacto vía Telefónico o vía Whatsapp</label>
+              </div>
+              <span id="ctaFormPrivacidadLabel" class="alert hide">
+                Haz click para aceptar las políticas de privacidad
+              </span>
+            </div>
+          </form>
+        </div>
       </div>
-      <div class="disclousure-cta">Acepto las <a href="https://www.netlife.ec/politica-privacidad/" target="_blank">Políticas de Privacidad</a> y Autorizo contacto vía Telefónico o vía Whatsapp</div>
     </section>
     <section class="simulator" id="simuladorSection">
       <div class="wrapper sides-padding">

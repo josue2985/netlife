@@ -15,12 +15,16 @@ section.cta {
     }
   }
   form {
-    display: flex;
-    align-items: center;
     position: relative;
-    width: 70%;
+    // width: 70%;
+    .form-inputs {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+    }
     input[type="text"],
     input[type="tel"] {
+      width: 100%;
       background-color: #fff;
       border: 1px solid #f47e1b;
       font-size: 15px;
@@ -69,12 +73,23 @@ section.cta {
   }
 }
 
+.form-disclosure {
+  margin-top: 10px;
+  text-align: center;
+}
+
 .disclousure-cta {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
   color: #000;
   text-align: center;
   a {
     font-weight: bold;
     color:#000;
+  }
+  label {
+    cursor: pointer;
   }
 }
 

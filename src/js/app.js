@@ -12,6 +12,7 @@ document.getElementById('form-hero')
    let form = document.getElementById('form-hero');
    let name = document.formHero.name.value;
    let phone = document.formHero.phone.value;
+   let privacidad = document.formHero.privacidad1.checked;
    if(name == null || name == '') {
     showLabel('heroFormNameLabel');
     form.name.focus();
@@ -21,9 +22,14 @@ document.getElementById('form-hero')
     showLabel('heroFormPhoneLabel');  
     form.phone.focus();
     return false;  
+   } if(privacidad === false) {
+    hideLabel('heroFormNameLabel'); 
+    hideLabel('heroFormPhoneLabel'); 
+    showLabel('heroFormPrivacidadLabel');  
    } else {
     hideLabel('heroFormNameLabel');  
-    hideLabel('heroFormPhoneLabel');  
+    hideLabel('heroFormPhoneLabel'); 
+    hideLabel('heroFormPrivacidadLabel');  
 
 
     btnHero.value = 'Enviando...';
@@ -52,6 +58,7 @@ document.getElementById('cta-form')
    let form = document.getElementById('cta-form');
    let name = document.ctaForm.name.value;
    let phone = document.ctaForm.phone.value;
+   let privacidad = document.ctaForm.privacidad2.checked;
    if(name == null || name == '') {
     showLabel('ctaNameLabel');
     form.name.focus();
@@ -61,9 +68,14 @@ document.getElementById('cta-form')
     showLabel('ctaphoneLabel');  
     form.phone.focus();
     return false;  
+   } if(privacidad === false) {
+    hideLabel('heroFormNameLabel'); 
+    hideLabel('heroFormPhoneLabel'); 
+    showLabel('ctaFormPrivacidadLabel');  
    } else {
     hideLabel('ctaNameLabel');  
     hideLabel('ctaphoneLabel');  
+    hideLabel('ctaFormPrivacidadLabel');  
 
 
     btnCta.value = 'Enviando...';
